@@ -18,3 +18,12 @@ contract Fallback
 ```
 With this line, we are declaring a new contrawct named Fallback. Inside this contract is where we will code out the functions and variables of the contract.
 
+```solidity
+  using SafeMath for uint256;
+  mapping(address => uint) public contributions;
+  address payable public owner;
+```
+The first line here declares the fact that all the unsigned integers(uint256) that is in the following code is using SafeMath library for the math operations.
+The next line declares a mapping which is a kind of a dictionary that attaches a key with a value. Our mapping, contributions which is a public mapping contains the wallet address to the uints associated with the addresses.
+The third line helps in identifying an owner which is a ```payable``` address that is public. Later we will see why this line has a flaw in it.
+    
