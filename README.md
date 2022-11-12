@@ -5,7 +5,7 @@ This repo is intended to help web3 learners who use Ethernaut to train themselve
 
 
 Current available solutions in the repo:
-- [x] Challenge #1 Hello Ethernaut
+- [x] Challenge #1 Hello Ethernaut (Just follow the tutorial given on the page itself)
 - [x] Challenge #2 Fallback
 - [x] Challenge #3 Fallout
 - [ ] Challenge #4 Coin Flip
