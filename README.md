@@ -1,5 +1,7 @@
 # EthernautProblems
-This repo is intended to help web3 learners who use Ethernaut to train themselves to identify vulnerabilities in a smart contract and fix them and to get better at understanding Solidity code. I have tried my best to give you some good reference points and good explanations and sometimes even resources attached. You can use this repo as a solution guide but I recommend you to do things your own way first and understand it on your own even if you have to spend a lot of time on understanding it. Only and only use this guide if you get stuck at one particular section and only try and refer to that particular section and try doing the remaining on your own.
+This repo is intended to help web3 learners who use Ethernaut to train themselves to identify vulnerabilities in a smart contract and fix them and to get better at understanding Solidity code. I have tried my best to give you some good reference points and good explanations and sometimes even resources attached.
+
+> You can use this repo as a solution guide but I recommend you to do things your own way first and understand it on your own even if you have to spend a lot of time understanding it. Only and only use this guide if you get stuck at one particular section and only try and refer to that particular section and try doing the remaining on your own.
 
 
 Current available solutions in the repo:
