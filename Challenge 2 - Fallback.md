@@ -71,3 +71,11 @@ This function calls back the ether from the contract to the owner of the contrac
 >  require(sent, "Failed to send Ether"); ```
 >  
 >  If you want an example, you can check it out at https://solidity-by-example.org/sending-ether/ _
+
+```solidity
+ receive() external payable {
+    require(msg.value > 0 && contributions[msg.sender] > 0);
+    owner = msg.sender;
+  }
+```
+You can understand the receive function from [here](https://docs.soliditylang.org/en/v0.8.17/contracts.html)
