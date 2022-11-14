@@ -48,4 +48,22 @@ function contribute() public payable {
       owner = msg.sender;
     }
   }
-  ```
+```
+The contribute() function adds values of the caller into the contributions mapping that we declared early on. In this we can see that if the contributions of the sender - that is you as the player - are greater than the current owner's contributions then you can become the owner of the contract.
+
+
+```solidity
+  function getContribution() public view returns (uint) {
+    return contributions[msg.sender];
+  }
+```
+The getContribution() function shows all the contributions of the user calling the function
+
+```solidity
+  function withdraw() public onlyOwner {
+    owner.transfer(address(this).balance);
+  }
+```
+This function calls back the ether from the contract to the owner of the contract and as you can see the onlyOwner modifer is used here to restrict access of this contract to the owner only.
+
+>  _ Note: transfer() is no longer the recommended way to transfer ether, instead we use (bool sent, bytes memory data) = _to.call{value: msg.value}(""); require(sent, "Failed to send Ether"); If you want an example, you can check it out at https://solidity-by-example.org/sending-ether/ _
