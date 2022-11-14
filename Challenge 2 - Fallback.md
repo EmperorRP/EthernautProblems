@@ -66,4 +66,8 @@ The getContribution() function shows all the contributions of the user calling t
 ```
 This function calls back the ether from the contract to the owner of the contract and as you can see the onlyOwner modifer is used here to restrict access of this contract to the owner only.
 
->  _ Note: transfer() is no longer the recommended way to transfer ether, instead we use (bool sent, bytes memory data) = _to.call{value: msg.value}(""); require(sent, "Failed to send Ether"); If you want an example, you can check it out at https://solidity-by-example.org/sending-ether/ _
+>  _ Note: transfer() is no longer the recommended way to transfer ether, instead we use ```solidity 
+>  (bool sent, bytes memory data) = _to.call{value: msg.value}(""); 
+>  require(sent, "Failed to send Ether"); ```
+>  
+>  If you want an example, you can check it out at https://solidity-by-example.org/sending-ether/ _
