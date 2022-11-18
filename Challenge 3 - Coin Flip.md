@@ -16,12 +16,39 @@ Initially the contract declares these 3 variables.
 
 - FACTOR is an integer that helps in easing the randomization because randomization is not an easy task to do on the blockchain.
 
+
 ```solidity
   constructor() {
     consecutiveWins = 0;
   }
 ```
+A constructor is an optional function that initializes state variables. In our case, we are initializing consecutiveWins as 0;
 
+```solidity
+function flip(bool _guess) public returns (bool) {
+    uint256 blockValue = uint256(blockhash(block.number - 1));
+
+    if (lastHash == blockValue) {
+      revert();
+    }
+
+    lastHash = blockValue;
+    uint256 coinFlip = blockValue / FACTOR;
+    bool side = coinFlip == 1 ? true : false;
+
+    if (side == _guess) {
+      consecutiveWins++;
+      return true;
+    } else {
+      consecutiveWins = 0;
+      return false;
+    }
+  }
+```
+
+Here comes the main part of the contract code - the function ```flip()```. This is a public function that returns the value true or false. We first have a ```uint256 blockValue = uint256(blockhash(block.number - 1));``` This blockValue is a typecasted blockhash of the previous block on the blockchain. 
+
+We check if the hash of the previous block is the same as the blockValue.
 
 blockhash - every block in a blockchain has a unique fingerprint and thats what the blockhash stands for
 block.number gives us the current block > if we subtract 1, we are going to the previous block
