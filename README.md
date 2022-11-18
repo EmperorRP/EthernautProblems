@@ -8,7 +8,7 @@ Current available solutions in the repo:
 - [x] Challenge #1 Hello Ethernaut (Just follow the tutorial given on the page itself)
 - [x] Challenge #2 Fallback
 - [x] Challenge #3 Fallout
-- [ ] Challenge #4 Coin Flip
+- [x] Challenge #4 Coin Flip
 - [ ] Challenge #5 Telephone
 - [ ] Challenge #6 Token
 - [ ] Challenge #7 Delegation
