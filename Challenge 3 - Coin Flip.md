@@ -104,5 +104,21 @@ We are using the same FACTOR from before.
 
 We declare the constructor with the argument __hackedContractAddr__ which is of address type this address is the CoinFlip contract address that we will be deploying at. 
 
-The function flip() has the blockValue same as before and 
+The function flip() has the blockValue same as before and coinFlip is calculated in the same way. However, when we pass the contract with our side variable, what is happening is on the original contract, we are getting a _guess = side and if you recall, in the original contract, we had 
+
+```solidity
+    if (side == _guess) {
+      consecutiveWins++;
+      return true;
+    } else {
+      consecutiveWins = 0;
+      return false;
+    }
+ ```
+ 
+ Once we already pass the arguement that side in the contract and the _guess that we pass (that we already know the value of), we are getting a return of true and will always provide the value of true.
+ 
+ Hence, is the solution of the challenge.
+ 
+_If you have any improvements to make to this, feel free to fork and make a pull request._
 
