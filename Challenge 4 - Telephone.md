@@ -25,4 +25,4 @@ contract Telephone {
 
 This is a simple contract but let's understand what the function is doing here.
 
-The function changeOwner which takes in _owner of type address as a parameter basically declares that if the original transaction sendedr and the sender of the "msg" or the ETH is
+The function changeOwner which takes in _owner of type address as a parameter basically declares that if the original transaction sender and the sender of the "msg" or the ETH is the same then the _owner address now becomes the new owner.
