@@ -36,3 +36,7 @@ EOA is a the user's wallet address. Example: your Metamask account's address is 
 EOAs satisfy the following conditions:
 - Only type of account that can initiate a transaction and
 - Only type of account that owns a private key
+
+This challenge requires us to make a Phishing Attack on this contract and teach us why one shouldn't use tx.origin to authenticate an account to execute a function.
+
+
