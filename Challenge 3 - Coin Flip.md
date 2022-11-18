@@ -104,4 +104,5 @@ We are using the same FACTOR from before.
 
 We declare the constructor with the argument __hackedContractAddr__ which is of address type this address is the CoinFlip contract address that we will be deploying at. 
 
+The function flip() has the blockValue same as before and 
 
