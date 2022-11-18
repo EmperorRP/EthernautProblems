@@ -27,5 +27,5 @@ This is a simple contract but let's understand what the function is doing here.
 
 The function changeOwner which takes in _owner of type address as a parameter basically declares that if the original transaction sender and the sender of the "msg" or the ETH is the same then the _owner address now becomes the new owner.
 
-- ```tx.origin``` refers to the sender of the transaction and it is of type address.
-- ```msg.sender``` is the address of the person who sent the ETH.
+- ```tx.origin``` is a global variable that refers to the original external account of the transaction and it is of type address.Read the docs about tx.origin [here](https://docs.soliditylang.org/en/v0.8.17/units-and-global-variables.html?highlight=tx.origin)
+- ```msg.sender``` is the address of the user that invokes the function. Read the docs about msg.sender [here](https://docs.soliditylang.org/en/v0.8.17/units-and-global-variables.html?highlight=msg.sender)
