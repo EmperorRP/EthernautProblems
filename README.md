@@ -12,7 +12,7 @@ Current available solutions in the repo:
 - [x] Challenge #5 Telephone
 - [x] Challenge #6 Token
 - [x] Challenge #7 Delegation
-- [ ] Challenge #8 Force
+- [x] Challenge #8 Force
 - [ ] Challenge #9 Vault
 - [ ] Challenge #10 King
 - [ ] Challenge #11 Re-entrancy
