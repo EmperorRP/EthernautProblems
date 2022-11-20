@@ -11,7 +11,7 @@ Current available solutions in the repo:
 - [x] Challenge #4 Coin Flip
 - [x] Challenge #5 Telephone
 - [x] Challenge #6 Token
-- [ ] Challenge #7 Delegation
+- [x] Challenge #7 Delegation
 - [ ] Challenge #8 Force
 - [ ] Challenge #9 Vault
 - [ ] Challenge #10 King
