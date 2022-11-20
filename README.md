@@ -10,7 +10,7 @@ Current available solutions in the repo:
 - [x] Challenge #3 Fallout
 - [x] Challenge #4 Coin Flip
 - [x] Challenge #5 Telephone
-- [ ] Challenge #6 Token
+- [x] Challenge #6 Token
 - [ ] Challenge #7 Delegation
 - [ ] Challenge #8 Force
 - [ ] Challenge #9 Vault
