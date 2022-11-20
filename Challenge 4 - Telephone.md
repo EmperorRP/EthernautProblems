@@ -61,4 +61,8 @@ contract TelephonePhishing {
 }
 ```
 
+So when my smart contract is calling that function, the account signing on that transaction is my account but the account calling that function is of the smart contract, since they are not matching, the owner changes to moi. 
 
+That's it!
+
+> _If you have any suggestions or changes/better explanations, go ahead make a PR._
