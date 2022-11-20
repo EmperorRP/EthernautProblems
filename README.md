@@ -13,8 +13,8 @@ Current available solutions in the repo:
 - [x] Challenge #6 Token
 - [x] Challenge #7 Delegation
 - [x] Challenge #8 Force
-- [ ] Challenge #9 Vault
-- [ ] Challenge #10 King
+- [x] Challenge #9 Vault
+- [x] Challenge #10 King
 - [ ] Challenge #11 Re-entrancy
 
 All the challenges that are check marked are done and provided in the repo.
