@@ -28,3 +28,10 @@ function transfer(address _to, uint _value) public returns (bool) {
   }
 ```
 
+The function first checks if the balances of the users are above or equal to 0 and then decreases the balance according to the amount to be transferred.
+
+This challenge wants us to understand the concept of overflow. Understand what that is and then just do the following.
+
+## Solution
+All you have to do is contract.transfer('0x random address', 20 + 1)
+This will make the contract transfer 20-21=-1 and this would trigger an arithmetic underflow.
